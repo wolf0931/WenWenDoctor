@@ -34,7 +34,6 @@ public class DefaultHXSDKModel extends HXSDKModel{
     private static final String PREF_PWD = "pwd";
     private static final String PREF_USERUID= "useruid";
     private static final String PREF_ACCOUNTRNAME = "accountname";
-    UserDao dao = null;
     protected Context context = null;
     
     public DefaultHXSDKModel(Context ctx){
