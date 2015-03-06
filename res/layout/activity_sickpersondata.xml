@@ -1,0 +1,753 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#f2f0eb"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:id="@+id/title"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/height_top_bar"
+        android:background="@color/common_top_bar_blue" >
+
+        <LinearLayout
+            android:layout_width="45dp"
+            android:layout_height="match_parent"
+            android:background="@drawable/common_tab_bg"
+            android:onClick="back" >
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="9dp"
+                android:scaleType="centerInside"
+                android:src="@drawable/mm_title_back" />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/tag"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:textColor="#ffffff"
+            android:textSize="20sp" />
+    </RelativeLayout>
+
+    <ScrollView style="@style/scroll_style" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" >
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp" >
+
+                <TextView
+                    android:id="@+id/iv_username"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:padding="5dp"
+                    android:text="名字        "
+                    android:textSize="18sp" />
+
+                <EditText
+                    android:id="@+id/username"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="25dp"
+                    android:layout_marginRight="5dp"
+                    android:layout_toRightOf="@id/iv_username"
+                    android:background="#ffffff"
+                    android:padding="5dp"
+                    android:singleLine="true"
+                    android:textSize="18sp" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_below="@id/username"
+                    android:layout_marginTop="5dp"
+                    android:background="#b3b3b3" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp" >
+
+                <TextView
+                    android:id="@+id/tv_sex"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:padding="5dp"
+                    android:text="性别        "
+                    android:textSize="18sp" />
+
+                <RadioGroup
+                    android:id="@+id/sex"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="25dp"
+                    android:layout_toRightOf="@id/tv_sex"
+                    android:orientation="horizontal" >
+
+                    <RadioButton
+                        android:id="@+id/male"
+                        android:checked="true"
+                        android:text="男" />
+
+                    <RadioButton
+                        android:id="@+id/female"
+                        android:text="女" />
+                </RadioGroup>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_below="@id/tv_sex"
+                    android:layout_marginTop="5dp"
+                    android:background="#b3b3b3" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:visibility="gone" >
+
+                <TextView
+                    android:id="@+id/tv_time"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:padding="5dp"
+                    android:text="出身年月"
+                    android:textSize="18sp" />
+
+                <EditText
+                    android:id="@+id/time"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="25dp"
+                    android:layout_marginRight="5dp"
+                    android:layout_toRightOf="@id/tv_time"
+                    android:background="#ffffff"
+                    android:padding="5dp"
+                    android:singleLine="true"
+                    android:textSize="18sp" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_below="@id/tv_time"
+                    android:layout_marginTop="5dp"
+                    android:background="#b3b3b3" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp" >
+
+                <TextView
+                    android:id="@+id/tv_marray"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:padding="5dp"
+                    android:text="婚姻状况"
+                    android:textSize="18sp" />
+
+                <RadioGroup
+                    android:id="@+id/marital_status"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="25dp"
+                    android:layout_toRightOf="@id/tv_marray"
+                    android:orientation="horizontal" >
+
+                    <RadioButton
+                        android:id="@+id/status1"
+                        android:checked="true"
+                        android:text="已婚" />
+
+                    <RadioButton
+                        android:id="@+id/status2"
+                        android:text="未婚" />
+                </RadioGroup>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_below="@id/tv_marray"
+                    android:layout_marginTop="5dp"
+                    android:background="#b3b3b3" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp" >
+
+                <TextView
+                    android:id="@+id/tv_marray1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:padding="5dp"
+                    android:text="怀孕史    "
+                    android:textSize="18sp" />
+
+                <RadioGroup
+                    android:id="@+id/bady"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="25dp"
+                    android:layout_toRightOf="@id/tv_marray1"
+                    android:orientation="horizontal" >
+
+                    <RadioButton
+                        android:id="@+id/bady1"
+                        android:checked="true"
+                        android:text="是" />
+
+                    <RadioButton
+                        android:id="@+id/bady2"
+                        android:text="否" />
+                </RadioGroup>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_below="@id/tv_marray1"
+                    android:layout_marginTop="5dp"
+                    android:background="#b3b3b3" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:visibility="gone" >
+
+                <TextView
+                    android:id="@+id/tv_marry_time"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:padding="5dp"
+                    android:text="结婚年月"
+                    android:textSize="18sp" />
+
+                <EditText
+                    android:id="@+id/marry_time"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="25dp"
+                    android:layout_marginRight="5dp"
+                    android:layout_toRightOf="@id/tv_marry_time"
+                    android:background="#ffffff"
+                    android:padding="5dp"
+                    android:singleLine="true"
+                    android:textSize="18sp" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_below="@id/tv_marry_time"
+                    android:layout_marginTop="5dp"
+                    android:background="#b3b3b3" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp" >
+
+                <TextView
+                    android:id="@+id/tv_work"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:padding="5dp"
+                    android:text="本人职业"
+                    android:textSize="18sp" />
+
+                <EditText
+                    android:id="@+id/work"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="25dp"
+                    android:layout_marginRight="5dp"
+                    android:layout_toRightOf="@id/tv_work"
+                    android:background="#ffffff"
+                    android:padding="5dp"
+                    android:singleLine="true"
+                    android:textSize="18sp" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_below="@id/tv_work"
+                    android:layout_marginTop="5dp"
+                    android:background="#b3b3b3" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp" >
+
+                <TextView
+                    android:id="@+id/tv_zq"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:padding="5dp"
+                    android:text="女方月经周期"
+                    android:textSize="18sp" />
+
+                <EditText
+                    android:id="@+id/ed_zq"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="25dp"
+                    android:layout_marginRight="5dp"
+                    android:layout_toRightOf="@id/tv_zq"
+                    android:background="#ffffff"
+                    android:minEms="5"
+                    android:padding="5dp"
+                    android:singleLine="true"
+                    android:textSize="18sp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_toRightOf="@id/ed_zq"
+                    android:padding="5dp"
+                    android:text="天"
+                    android:textSize="18sp" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_below="@id/tv_zq"
+                    android:layout_marginTop="5dp"
+                    android:background="#b3b3b3" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp" >
+
+                <TextView
+                    android:id="@+id/tv_jz"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:padding="5dp"
+                    android:text="男方精子"
+                    android:textSize="18sp" />
+
+                <EditText
+                    android:id="@+id/ed_jz"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="25dp"
+                    android:layout_marginRight="5dp"
+                    android:layout_toRightOf="@id/tv_jz"
+                    android:background="#ffffff"
+                    android:minEms="5"
+                    android:padding="5dp"
+                    android:singleLine="true"
+                    android:textSize="18sp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_toRightOf="@id/ed_jz"
+                    android:padding="5dp"
+                    android:text="百万个/ml"
+                    android:textSize="18sp" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_below="@id/tv_jz"
+                    android:layout_marginTop="5dp"
+                    android:background="#b3b3b3" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp" >
+
+                <TextView
+                    android:id="@+id/tv_fsh"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:padding="5dp"
+                    android:text="基础FSH值"
+                    android:textSize="18sp" />
+
+                <EditText
+                    android:id="@+id/tv_fsh_txt"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="25dp"
+                    android:layout_marginRight="5dp"
+                    android:layout_toRightOf="@id/tv_fsh"
+                    android:background="#ffffff"
+                    android:minEms="5"
+                    android:padding="5dp"
+                    android:singleLine="true"
+                    android:textSize="18sp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_toRightOf="@id/tv_fsh_txt"
+                    android:padding="5dp"
+                    android:text="ng/ml"
+                    android:textSize="18sp" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_below="@id/tv_fsh"
+                    android:layout_marginTop="5dp"
+                    android:background="#b3b3b3" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp" >
+
+                <TextView
+                    android:id="@+id/tv_lh"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:padding="5dp"
+                    android:text="基础LH值"
+                    android:textSize="18sp" />
+
+                <EditText
+                    android:id="@+id/tv_lh_txt"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="25dp"
+                    android:layout_marginRight="5dp"
+                    android:layout_toRightOf="@id/tv_lh"
+                    android:background="#ffffff"
+                    android:minEms="5"
+                    android:padding="5dp"
+                    android:singleLine="true"
+                    android:textSize="18sp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_toRightOf="@id/tv_lh_txt"
+                    android:padding="5dp"
+                    android:text="ng/ml"
+                    android:textSize="18sp" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_below="@id/tv_lh"
+                    android:layout_marginTop="5dp"
+                    android:background="#b3b3b3" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp" >
+
+                <TextView
+                    android:id="@+id/tv1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:padding="5dp"
+                    android:text="不孕症原因"
+                    android:textSize="18sp" />
+
+                <EditText
+                    android:id="@+id/tv1_ed1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="25dp"
+                    android:layout_marginRight="5dp"
+                    android:layout_toRightOf="@id/tv1"
+                    android:background="#ffffff"
+                    android:padding="5dp"
+                    android:singleLine="true"
+                    android:textSize="18sp" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_below="@id/tv1"
+                    android:layout_marginTop="5dp"
+                    android:background="#b3b3b3" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp" >
+
+                <TextView
+                    android:id="@+id/tv_ivf"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:padding="5dp"
+                    android:text="曾经做过IVF"
+                    android:textSize="18sp" />
+
+                <EditText
+                    android:id="@+id/tv_ivf_txt"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="25dp"
+                    android:layout_marginRight="5dp"
+                    android:layout_toRightOf="@id/tv_ivf"
+                    android:background="#ffffff"
+                    android:minEms="5"
+                    android:padding="5dp"
+                    android:singleLine="true"
+                    android:textSize="18sp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_toRightOf="@id/tv_ivf_txt"
+                    android:padding="5dp"
+                    android:text="次"
+                    android:textSize="18sp" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_below="@id/tv_ivf"
+                    android:layout_marginTop="5dp"
+                    android:background="#b3b3b3" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:visibility="gone"
+                android:layout_marginTop="15dp" >
+
+                <TextView
+                    android:id="@+id/tv_female_work"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:padding="5dp"
+                    android:text="配偶职业"
+                    android:textSize="18sp" />
+
+                <EditText
+                    android:id="@+id/female_work"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="25dp"
+                    android:layout_marginRight="5dp"
+                    android:layout_toRightOf="@id/tv_female_work"
+                    android:background="#ffffff"
+                    android:padding="5dp"
+                    android:singleLine="true"
+                    android:textSize="18sp" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_below="@id/female_work"
+                    android:layout_marginTop="5dp"
+                    android:background="#b3b3b3" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:visibility="gone" >
+
+                <TextView
+                    android:id="@+id/tv_female_date"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:padding="5dp"
+                    android:text="配偶出身日期"
+                    android:textSize="12.3sp" />
+
+                <EditText
+                    android:id="@+id/female_date"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="25dp"
+                    android:layout_marginRight="5dp"
+                    android:layout_toRightOf="@id/tv_female_date"
+                    android:background="#ffffff"
+                    android:padding="5dp"
+                    android:singleLine="true"
+                    android:textSize="18sp" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_below="@id/tv_female_date"
+                    android:layout_marginTop="5dp"
+                    android:background="#b3b3b3" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:gravity="fill_vertical" >
+
+                <TextView
+                    android:id="@+id/tv_history"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:padding="5dp"
+                    android:text="有无遗传史"
+                    android:textSize="18sp" />
+
+                <RadioGroup
+                    android:id="@+id/history"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="25dp"
+                    android:layout_toRightOf="@id/tv_history"
+                    android:orientation="horizontal" >
+
+                    <RadioButton
+                        android:id="@+id/history1"
+                        android:text="有" />
+
+                    <RadioButton
+                        android:id="@+id/history2"
+                        android:checked="true"
+                        android:text="无" />
+                </RadioGroup>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_below="@id/tv_history"
+                    android:layout_marginTop="5dp"
+                    android:background="#b3b3b3" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:gravity="fill_vertical" >
+
+                <TextView
+                    android:id="@+id/tv_allergy"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:padding="5dp"
+                    android:text="有无过敏史"
+                    android:textSize="18sp" />
+
+                <RadioGroup
+                    android:id="@+id/allergy"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="25dp"
+                    android:layout_toRightOf="@id/tv_allergy"
+                    android:orientation="horizontal" >
+
+                    <RadioButton
+                        android:id="@+id/allergy1"
+                        android:text="有" />
+
+                    <RadioButton
+                        android:id="@+id/allergy2"
+                        android:checked="true"
+                        android:text="无" />
+                </RadioGroup>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_below="@id/tv_allergy"
+                    android:layout_marginTop="5dp"
+                    android:background="#b3b3b3" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp" >
+
+                <TextView
+                    android:id="@+id/iv_readme"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:padding="5dp"
+                    android:text="自述"
+                    android:textSize="18sp" />
+
+                <EditText
+                    android:id="@+id/readme"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="25dp"
+                    android:layout_marginRight="5dp"
+                    android:layout_toRightOf="@id/iv_readme"
+                    android:background="#ffffff"
+                    android:gravity="left|top"
+                    android:minLines="3"
+                    android:padding="5dp"
+                    android:textSize="18sp" />
+            </RelativeLayout>
+
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>

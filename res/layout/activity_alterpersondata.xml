@@ -1,0 +1,260 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#f2f0eb"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:id="@+id/title"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/height_top_bar"
+        android:background="@color/common_top_bar_blue" >
+
+        <LinearLayout
+            android:layout_width="45dp"
+            android:layout_height="match_parent"
+            android:background="@drawable/common_tab_bg"
+            android:onClick="back" >
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="9dp"
+                android:scaleType="centerInside"
+                android:src="@drawable/mm_title_back" />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/tag"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="修改资料"
+            android:textColor="#ffffff"
+            android:textSize="20sp" />
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical" >
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="25dp" >
+
+            <TextView
+                android:id="@+id/iv_username"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:padding="5dp"
+                android:text="姓名"
+                android:textSize="18sp" />
+
+            <EditText
+                android:id="@+id/username"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@id/iv_username"
+                android:background="@null"
+                android:padding="5dp"
+                android:singleLine="true"
+                android:textSize="18sp" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_below="@id/username"
+                android:background="#b3b3b3" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/layout_hospital"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="25dp" >
+
+            <TextView
+                android:id="@+id/iv_hospital"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:padding="5dp"
+                android:text="医院"
+                android:textSize="18sp" />
+
+            <EditText
+                android:id="@+id/hospital"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@id/iv_hospital"
+                android:padding="5dp"
+                android:singleLine="true"
+                android:background="@null"
+                android:textSize="18sp" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_below="@id/hospital"
+                android:background="#b3b3b3" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/layout_laboratory"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="25dp" >
+
+            <TextView
+                android:id="@+id/iv_laboratory"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:padding="5dp"
+                android:text="科室"
+                android:textSize="18sp" />
+
+            <ImageView
+                android:id="@+id/laboratory_arrow"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:contentDescription="@null"
+                android:paddingLeft="5dp"
+                android:paddingRight="10dp"
+                android:src="@drawable/content_area_arrows" />
+
+            <TextView
+                android:id="@+id/laboratory"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_toLeftOf="@id/laboratory_arrow"
+                android:layout_toRightOf="@id/iv_laboratory"
+                android:background="@null"
+                android:padding="5dp"
+                android:singleLine="true"
+                android:textSize="18sp" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_below="@id/laboratory"
+                android:background="#b3b3b3" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/layout_thesis"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="25dp" >
+
+            <TextView
+                android:id="@+id/iv_thesis"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:padding="5dp"
+                android:text="职称"
+                android:textSize="18sp" />
+
+            <ImageView
+                android:id="@+id/thesis_arrow"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:contentDescription="@null"
+                android:paddingLeft="5dp"
+                android:paddingRight="10dp"
+                android:src="@drawable/content_area_arrows" />
+
+            <TextView
+                android:id="@+id/thesis"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_toLeftOf="@id/thesis_arrow"
+                android:layout_toRightOf="@id/iv_thesis"
+                android:background="@null"
+                android:padding="5dp"
+                android:singleLine="true"
+                android:textSize="18sp"  />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_below="@id/thesis"
+                android:background="#b3b3b3" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="25dp" >
+
+            <TextView
+                android:id="@+id/iv_skilled"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:padding="5dp"
+                android:text="擅长及诊所介绍"
+                android:textSize="18sp" />
+
+            <EditText
+                android:id="@+id/skilled"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@id/iv_skilled"
+                android:padding="5dp"
+                android:text="不孕不育"
+                android:background="@null"
+                android:textSize="18sp" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_below="@id/skilled"
+                android:background="#b3b3b3" />
+        </RelativeLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="8dp"
+            android:layout_marginRight="8dp"
+            android:layout_marginTop="16dp"
+            android:orientation="horizontal" >
+
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="8dp"
+                android:layout_marginRight="8dp"
+                android:layout_marginTop="5dp"
+                android:background="@drawable/btn_blue_selector"
+                android:onClick="sub"
+                android:paddingBottom="7dp"
+                android:paddingTop="7dp"
+                android:text="修改"
+                android:textColor="@android:color/white"
+                android:textSize="20sp" />
+        </LinearLayout>
+    </LinearLayout>
+
+</LinearLayout>

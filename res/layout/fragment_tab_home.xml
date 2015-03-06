@@ -1,0 +1,259 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/common_bg"
+    android:orientation="vertical" >
+
+     <!-- 头部图片广告 -->
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="155dp"
+        android:orientation="vertical"
+        >
+
+        <RelativeLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:background="#000000" >
+
+            <com.wenwen.chatui.adv.AdvGallery
+                android:id="@+id/scroll_layout"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:gravity="center"
+                android:soundEffectsEnabled="true"
+                android:fadingEdgeLength="0dp"
+                android:unselectedAlpha="1" />
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="30dp"
+                android:layout_alignParentBottom="true"
+                android:background="#99333333"
+                android:gravity="center"
+                android:weightSum="1" >
+
+                <com.wenwen.chatui.adv.AdvTitle
+                    android:id="@+id/page_title"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="2dp"
+                    android:layout_weight="0.8"
+                    android:gravity="left" />
+
+                <com.wenwen.chatui.adv.AdvIndex
+                    android:id="@+id/page_control"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.2"
+                    android:gravity="center_horizontal|center_vertical" />
+            </LinearLayout>
+        </RelativeLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="5dp"
+        android:background="@drawable/person_view_none_selector"
+        android:orientation="vertical"
+        android:padding="1dp" >
+
+        <RelativeLayout
+            android:id="@+id/latyout_home_line"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/layout_item_no_corners_selector"
+            android:clickable="true"
+            android:padding="5dp" >
+
+            <ImageView
+                android:id="@+id/account_img"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:contentDescription="@null"
+                android:src="@drawable/home_item_one" />
+
+            <TextView
+                android:id="@+id/unread_line_number"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignRight="@id/account_img"
+                android:background="@drawable/unread_count_bg"
+                android:gravity="center"
+                android:text="7"
+                android:textColor="@android:color/white"
+                android:textSize="12sp"
+                android:visibility="visible" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="10dp"
+                android:layout_toRightOf="@id/account_img"
+                android:orientation="vertical" >
+
+                <TextView
+                    style="@style/persion_info_txt"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/home_item_zxzx_txt" />
+
+                <TextView
+                    android:id="@+id/line_number"
+                    style="@style/persion_info_txt"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/person_item_personal_data" />
+            </LinearLayout>
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:contentDescription="@null"
+                android:paddingRight="5dp"
+                android:src="@drawable/content_area_arrows" />
+        </RelativeLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="5dp"
+        android:background="@drawable/person_view_none_selector"
+        android:orientation="vertical"
+        android:padding="1dp" >
+
+        <RelativeLayout
+            android:id="@+id/latyout_home_phone"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/layout_item_no_corners_selector"
+            android:clickable="true"
+            android:padding="5dp" >
+
+            <ImageView
+                android:id="@+id/account_img1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:contentDescription="@null"
+                android:src="@drawable/home_item_two" />
+
+            <TextView
+                android:id="@+id/unread_phone_number"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignRight="@id/account_img1"
+                android:background="@drawable/unread_count_bg"
+                android:gravity="center"
+                android:text="7"
+                android:textColor="@android:color/white"
+                android:textSize="12sp"
+                android:visibility="visible" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="10dp"
+                android:layout_toRightOf="@id/account_img1"
+                android:orientation="vertical" >
+
+                <TextView
+                    style="@style/persion_info_txt"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/home_item_phone_txt" />
+
+                <TextView
+                    android:id="@+id/phone_number"
+                    style="@style/persion_info_txt"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/person_item_personal_data" />
+            </LinearLayout>
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:contentDescription="@null"
+                android:paddingRight="5dp"
+                android:src="@drawable/content_area_arrows" />
+        </RelativeLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="5dp"
+        android:background="@drawable/person_view_none_selector"
+        android:orientation="vertical"
+        android:padding="1dp" >
+
+        <RelativeLayout
+            android:id="@+id/latyout_home_mz"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/layout_item_no_corners_selector"
+            android:clickable="true"
+            android:padding="5dp" >
+
+            <ImageView
+                android:id="@+id/account_img2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:contentDescription="@null"
+                android:src="@drawable/home_item_there" />
+
+            <TextView
+                android:id="@+id/unread_mz_number"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignRight="@id/account_img2"
+                android:background="@drawable/unread_count_bg"
+                android:gravity="center"
+                android:text="7"
+                android:textColor="@android:color/white"
+                android:textSize="12sp"
+                android:visibility="visible" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="10dp"
+                android:layout_toRightOf="@id/account_img2"
+                android:orientation="vertical" >
+
+                <TextView
+                    style="@style/persion_info_txt"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/home_item_mz_txt" />
+
+                <TextView
+                    android:id="@+id/mz_number"
+                    style="@style/persion_info_txt"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/person_item_personal_data" />
+            </LinearLayout>
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:contentDescription="@null"
+                android:paddingRight="5dp"
+                android:src="@drawable/content_area_arrows" />
+        </RelativeLayout>
+    </LinearLayout>
+
+</LinearLayout>

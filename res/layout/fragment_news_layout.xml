@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@color/common_bg"
+    android:orientation="vertical" >
+
+    <!-- title -->
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="45dp"
+        android:background="@color/top_bar_normal_bg"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:weightSum="1" >
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="45dp"
+            android:layout_weight="0.7"
+            android:gravity="center_horizontal|center_vertical"
+            android:orientation="vertical" >
+
+            <TextView
+                android:id="@+id/second_nav_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/news_title"
+                android:textColor="#FFFFFFFF"
+                android:textSize="22sp"
+                android:textStyle="bold" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <!-- end title -->
+
+    <HorizontalScrollView
+        android:id="@+id/horizontalScrollView"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:background="@drawable/list_banner"
+        android:fadingEdge="@null"
+        android:scrollbars="none" >
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent" >
+
+            <RadioGroup
+                android:id="@+id/radioGroup"
+                android:layout_width="fill_parent"
+                android:layout_height="40dp"
+                android:layout_alignParentTop="true"
+                android:orientation="horizontal" >
+
+                <RadioButton
+                    android:id="@+id/btn1"
+                    style="@style/radioButton"
+                    android:layout_weight="1"
+                    android:text="热点" />
+
+                <RadioButton
+                    android:id="@+id/btn2"
+                    style="@style/radioButton"
+                    android:text="育儿" />
+
+                <RadioButton
+                    android:id="@+id/btn3"
+                    style="@style/radioButton"
+                    android:text="两性" />
+
+                <RadioButton
+                    android:id="@+id/btn4"
+                    style="@style/radioButton"
+                    android:text="情感" />
+            </RadioGroup>
+
+            <ImageView
+                android:id="@+id/img1"
+                android:layout_width="80dp"
+                android:layout_height="3dp"
+                android:layout_alignParentBottom="true"
+                android:background="#990000"
+                android:contentDescription="@null" />
+        </RelativeLayout>
+    </HorizontalScrollView>
+
+    <View
+        android:layout_width="fill_parent"
+        android:layout_height="2dp" />
+
+    <LinearLayout
+        android:id="@+id/content_layout"
+        android:layout_width="fill_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1" >
+
+        <android.support.v4.view.ViewPager
+            android:id="@+id/pager"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:background="#333333" />
+    </LinearLayout>
+
+</LinearLayout>

@@ -1,0 +1,521 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/common_bg"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/height_top_bar"
+        android:background="@color/top_bar_normal_bg"
+        android:gravity="center_vertical" >
+
+        <LinearLayout
+            android:layout_width="45dp"
+            android:layout_height="match_parent"
+            android:background="@drawable/common_tab_bg"
+            android:onClick="back" >
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="9dp"
+                android:scaleType="centerInside"
+                android:src="@drawable/mm_title_back" />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/message_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="电话预约设置"
+            android:textColor="#fff"
+            android:textSize="18sp" />
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/tv"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:gravity="center"
+        android:padding="10dp"
+        android:text="1111"
+        android:textSize="18sp" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="5dp"
+        android:background="@drawable/person_view_none_selector"
+        android:orientation="vertical"
+        android:padding="1dp" >
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" >
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal" >
+
+                <TextView
+                    android:id="@+id/time_tv"
+                    android:layout_width="55dp"
+                    android:layout_height="wrap_content"
+                    android:background="#FB6703"
+                    android:gravity="center"
+                    android:padding="5dp"
+                    android:text="时段"
+                    android:textSize="16sp" />
+
+                <View
+                    android:layout_width="1dp"
+                    android:layout_height="30dp"
+                    android:background="#cccccc" />
+
+                <TextView
+                    android:id="@+id/time_sw"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="6"
+                    android:background="#4DD161"
+                    android:gravity="center"
+                    android:padding="5dp"
+                    android:text="上午"
+                    android:textSize="16sp" />
+
+                <View
+                    android:layout_width="1dp"
+                    android:layout_height="30dp"
+                    android:background="#cccccc" />
+
+                <TextView
+                    android:id="@+id/time_xw"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="6"
+                    android:background="#4DD161"
+                    android:gravity="center"
+                    android:padding="5dp"
+                    android:text="下午"
+                    android:textSize="16sp" />
+            </LinearLayout>
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" >
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal" >
+
+                <TextView
+                    android:id="@+id/time_tv1"
+                    android:layout_width="55dp"
+                    android:layout_height="wrap_content"
+                    android:background="#4DD161"
+                    android:gravity="center"
+                    android:padding="5dp"
+                    android:text="周一"
+                    android:textSize="16sp" />
+
+                <View
+                    android:layout_width="1dp"
+                    android:layout_height="30dp"
+                    android:background="#cccccc" />
+
+                <EditText
+                    android:id="@+id/time_sw1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="6"
+                    android:gravity="center"
+                    android:padding="5dp"
+                    android:text=""
+                    android:textSize="16sp" />
+
+                <EditText
+                    android:id="@+id/time_xw1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="6"
+                    android:gravity="center"
+                    android:padding="5dp"
+                    android:textSize="16sp" />
+            </LinearLayout>
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" >
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal" >
+
+                <TextView
+                    android:id="@+id/time_tv2"
+                    android:layout_width="55dp"
+                    android:layout_height="wrap_content"
+                    android:background="#4DD161"
+                    android:gravity="center"
+                    android:padding="5dp"
+                    android:text="周二"
+                    android:textSize="16sp" />
+
+                <View
+                    android:layout_width="1dp"
+                    android:layout_height="30dp"
+                    android:background="#cccccc" />
+
+                <EditText
+                    android:id="@+id/time_sw2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="6"
+                    android:gravity="center"
+                    android:padding="5dp"
+                    android:textSize="16sp" />
+
+                <EditText
+                    android:id="@+id/time_xw2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="6"
+                    android:gravity="center"
+                    android:padding="5dp"
+                    android:textSize="16sp" />
+            </LinearLayout>
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" >
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal" >
+
+                <TextView
+                    android:id="@+id/time_tv3"
+                    android:layout_width="55dp"
+                    android:layout_height="wrap_content"
+                    android:background="#4DD161"
+                    android:gravity="center"
+                    android:padding="5dp"
+                    android:text="周三"
+                    android:textSize="16sp" />
+
+                <View
+                    android:layout_width="1dp"
+                    android:layout_height="30dp"
+                    android:background="#cccccc" />
+
+                <EditText
+                    android:id="@+id/time_sw3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="6"
+                    android:gravity="center"
+                    android:padding="5dp"
+                    android:textSize="16sp" />
+
+                <EditText
+                    android:id="@+id/time_xw3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="6"
+                    android:gravity="center"
+                    android:padding="5dp"
+                    android:text=""
+                    android:textSize="16sp" />
+            </LinearLayout>
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" >
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal" >
+
+                <TextView
+                    android:id="@+id/time_tv4"
+                    android:layout_width="55dp"
+                    android:layout_height="wrap_content"
+                    android:background="#4DD161"
+                    android:gravity="center"
+                    android:padding="5dp"
+                    android:text="周四"
+                    android:textSize="16sp" />
+
+                <View
+                    android:layout_width="1dp"
+                    android:layout_height="30dp"
+                    android:background="#cccccc" />
+
+                <EditText
+                    android:id="@+id/time_sw4"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="6"
+                    android:gravity="center"
+                    android:padding="5dp"
+                    android:textSize="16sp" />
+
+                <EditText
+                    android:id="@+id/time_xw4"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="6"
+                    android:gravity="center"
+                    android:padding="5dp"
+                    android:text=""
+                    android:textSize="16sp" />
+            </LinearLayout>
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" >
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal" >
+
+                <TextView
+                    android:id="@+id/time_tv5"
+                    android:layout_width="55dp"
+                    android:layout_height="wrap_content"
+                    android:background="#4DD161"
+                    android:gravity="center"
+                    android:padding="5dp"
+                    android:text="周五"
+                    android:textSize="16sp" />
+
+                <View
+                    android:layout_width="1dp"
+                    android:layout_height="30dp"
+                    android:background="#cccccc" />
+
+                <EditText
+                    android:id="@+id/time_sw5"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="6"
+                    android:gravity="center"
+                    android:padding="5dp"
+                    android:textSize="16sp" />
+
+                <EditText
+                    android:id="@+id/time_xw5"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="6"
+                    android:gravity="center"
+                    android:padding="5dp"
+                    android:textSize="16sp" />
+            </LinearLayout>
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" >
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal" >
+
+                <TextView
+                    android:id="@+id/time_tv6"
+                    android:layout_width="55dp"
+                    android:layout_height="wrap_content"
+                    android:background="#4DD161"
+                    android:gravity="center"
+                    android:padding="5dp"
+                    android:text="周六"
+                    android:textSize="16sp" />
+
+                <View
+                    android:layout_width="1dp"
+                    android:layout_height="30dp"
+                    android:background="#cccccc" />
+
+                <EditText
+                    android:id="@+id/time_sw6"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="6"
+                    android:gravity="center"
+                    android:padding="5dp"
+                    android:textSize="16sp" />
+
+                <EditText
+                    android:id="@+id/time_xw6"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="6"
+                    android:gravity="center"
+                    android:padding="5dp"
+                    android:textSize="16sp" />
+            </LinearLayout>
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" >
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal" >
+
+                <TextView
+                    android:id="@+id/time_tv7"
+                    android:layout_width="55dp"
+                    android:layout_height="wrap_content"
+                    android:background="#4DD161"
+                    android:gravity="center"
+                    android:padding="5dp"
+                    android:text="周日"
+                    android:textSize="16sp" />
+
+                <View
+                    android:layout_width="1dp"
+                    android:layout_height="30dp"
+                    android:background="#cccccc" />
+
+                <EditText
+                    android:id="@+id/time_sw7"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="6"
+                    android:gravity="center"
+                    android:padding="5dp"
+                    android:textSize="16sp" />
+
+                <EditText
+                    android:id="@+id/time_xw7"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="6"
+                    android:gravity="center"
+                    android:padding="5dp"
+                    android:text=""
+                    android:textSize="16sp" />
+            </LinearLayout>
+        </RelativeLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="5dp"
+        android:background="@drawable/person_view_none_selector"
+        android:orientation="vertical"
+        android:padding="1dp" >
+
+        <RelativeLayout
+            android:id="@+id/rl_switch_vip"
+            android:layout_width="match_parent"
+            android:layout_height="50dip"
+            android:background="@drawable/btn_bottom_selector"
+            android:padding="10dip" >
+
+            <TextView
+                style="@style/persion_info_txt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:paddingLeft="10dip"
+                android:text="VIP服务" />
+
+            <ImageView
+                android:id="@+id/iv_switch_open_vip"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:background="@drawable/open_icon"
+                android:visibility="visible" />
+
+            <ImageView
+                android:id="@+id/iv_switch_close_vip"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:background="@drawable/close_icon"
+                android:visibility="invisible" />
+        </RelativeLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="5dp"
+        android:background="@drawable/person_view_none_selector"
+        android:orientation="vertical"
+        android:padding="1dp" >
+
+        <RelativeLayout
+            android:id="@+id/rl_points_every"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/btn_bottom_selector"
+            android:padding="5dip" >
+
+            <TextView
+                style="@style/persion_info_txt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:paddingLeft="10dip"
+                android:text="每次服务积分" />
+
+            <EditText
+                android:id="@+id/et_points_every_num"
+                style="@style/persion_info_txt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:text="100" />
+        </RelativeLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dip"
+        android:background="#ffffff"
+        android:orientation="vertical" >
+
+        <Button
+            android:id="@+id/save"
+            android:layout_width="match_parent"
+            android:layout_height="34dp"
+            android:layout_marginBottom="12dp"
+            android:layout_marginLeft="10dip"
+            android:layout_marginRight="10dip"
+            android:layout_marginTop="12dp"
+            android:background="@drawable/btn_blue_selector"
+            android:text="保存"
+            android:textColor="@android:color/white"
+            android:textSize="18sp" />
+    </LinearLayout>
+
+</LinearLayout>
