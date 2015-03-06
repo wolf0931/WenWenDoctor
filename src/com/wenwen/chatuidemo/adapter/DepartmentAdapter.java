@@ -50,6 +50,7 @@ public class DepartmentAdapter extends BaseAdapter {
             holder = new ViewHolder();
             convertView = layoutInflater.inflate(R.layout.activity_hospital_item, null);
             holder.tv_name = (TextView) convertView.findViewById(R.id.tv);
+            convertView.setTag(holder);
         } else {
             holder = (ViewHolder) convertView.getTag();
         }
